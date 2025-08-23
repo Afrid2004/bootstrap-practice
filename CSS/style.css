@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+        font-weight: 300;
 }
 .fi{
     font-size: 3rem;
@@ -13,4 +14,11 @@
 
 .fi-tr-department-structure{
     font-size: 1.4rem;
+}
+.pagination{
+    margin-bottom: 0rem;
+}
+.copy{
+    opacity: .5;
+    font-size: .9rem !important;
 }
