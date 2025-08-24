@@ -31,26 +31,23 @@
     background-color: rgb(218, 229, 238);
 }
 .nav-link{
-    color: aliceblue;
+    color: black;
 }
 .nav-item:not(:last-child){
     margin-right: 1rem;
 }
 .nav-link:hover{
-    color: aliceblue;
+    color: black;
 }
-.navbar-toggler{
-        background-color: aliceblue;
-}
-.navbar-toggler-icon{
-    color: aliceblue;
 
+.fi-tr-menu-burger{
+    color: black;
 }
 .navbar-toggler:focus{
     box-shadow: none;
 }
 .navbar{
     backdrop-filter: blur(15px);
-    background: rgba(0,0,0,0.8);
+    background: rgba(252, 252, 252, 0.8);
 }
 
