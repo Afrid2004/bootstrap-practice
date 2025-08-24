@@ -22,17 +22,7 @@
     opacity: .5;
     font-size: .9rem !important;
 }
-.navbar-collapse{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
 
-.cs-nav{
-    text-align: left;
-    width: 100%;
-}
 .pill-link{
     color: black;
 }
@@ -40,25 +30,27 @@
     color: black;
     background-color: rgb(218, 229, 238);
 }
-
+.nav-link{
+    color: aliceblue;
+}
 .nav-item:not(:last-child){
     margin-right: 1rem;
+}
+.nav-link:hover{
+    color: aliceblue;
+}
+.navbar-toggler{
+        background-color: aliceblue;
+}
+.navbar-toggler-icon{
+    color: aliceblue;
+
 }
 .navbar-toggler:focus{
     box-shadow: none;
 }
 .navbar{
-    top: 0;
-    position: sticky;
-    z-index: 2;
-    backdrop-filter: blur(13px);
-    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(15px);
+    background: rgba(0,0,0,0.8);
 }
-.navbar-toggler:hover{
-    background-color: rgb(34, 34, 34);
-}
-@media (max-width:991px){
-    .navbar-nav{
-        width: 100%;
-    }
-}
+
