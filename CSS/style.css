@@ -39,7 +39,14 @@
 .nav-link:hover{
     color: black;
 }
-
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.navbar-brand h2{
+    margin-bottom: 0;
+}
 .fi-tr-menu-burger{
     color: black;
 }
