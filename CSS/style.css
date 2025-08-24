@@ -29,10 +29,18 @@
     align-items: flex-end;
 }
 
-.nav-item{
+.cs-nav{
     text-align: left;
     width: 100%;
 }
+.pill-link{
+    color: black;
+}
+.pill-link:hover{
+    color: black;
+    background-color: rgb(218, 229, 238);
+}
+
 .nav-item:not(:last-child){
     margin-right: 1rem;
 }
