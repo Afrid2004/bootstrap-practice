@@ -111,6 +111,7 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
 .table>:not(:last-child)>:last-child>* {
     border-bottom-color: transparent;
 }
+
 @media (max-width:768px){
     .navbar-nav .nav-item:not(:last-child){
         margin-right: 0rem;
