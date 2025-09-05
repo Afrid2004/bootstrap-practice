@@ -3,6 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+}
+body{
+    overflow-x: hidden;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
 .btn-purple{
     background-color: #7411F6;
@@ -87,6 +98,8 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
 .navbar-nav .nav-item:hover{
      background: rgba(238, 238, 238, 0.8);
      transition: background .3s ease-in-out;
+}.navbar-toggler{
+    border-color: transparent;
 }
 .br-8{
     border-radius: 8px !important;
@@ -112,11 +125,269 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 
     border-bottom-color: transparent;
 }
 
+.course-reg .form-check{
+    padding-left: 0;
+    width: fit-content;
+}
+.check-flex{
+    display: flex;
+    gap: 1rem;
+}
+
+.cs-form{
+    accent-color: #7a1af7;
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.form-control{
+    background: transparent;
+    border: 1px solid rgb(217, 218, 219);
+    border-radius: 7px;
+}
+.form-control::placeholder{
+    color: rgba(83, 83, 83, 0.822);
+}
+.form-control:focus{
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: 0 0 0 .25rem #5000b838;
+}
+.select-options{
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px !important;
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    border: 1px solid rgb(217, 218, 219);
+    transform: scale(0);
+    transform-origin: top right;
+    transition:all .5s ease-in-out;
+}
+.select-options.active{
+    opacity: 1;
+    height: 240px;
+    transform: scale(1);
+    transition:all .5s ease-in-out;
+}
+
+.select-options li{
+    width: 100%;
+    display: block;
+    padding:.5rem 1rem;
+    background-color: white;  
+    cursor: pointer;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cs-bg2{
+    background-image: url(../images/1757050404457.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4rem;
+}
+.select-options li p{
+    margin-bottom: 0rem;
+}
+.select-options li:hover{
+    color: inherit;
+    background-color: rgb(243, 232, 252);
+}
+.select-options li:active,
+.select-options li:focus{
+    color: inherit;
+    background-color: rgb(236, 219, 252);
+}.select-options li.activated{
+    background-color: rgb(239, 222, 255);
+}
+.select{
+    background: white;
+    border: 1px solid rgb(217, 218, 219);
+    padding:.5rem 1rem;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.select i,
+.select-options li i{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.select-options li i{
+    font-size: 1.2rem;
+}
+.select p,
+.lbl-radio p{
+    margin-bottom: 0rem;
+}
+.lbl-radio{
+    display: block;
+    position: relative;
+    padding: .5rem 1rem;
+    padding-left: 3rem;
+    border-radius: 7px;
+    border: 1px solid  rgb(211, 211, 211);
+    cursor: pointer;
+}
+.lbl-radio:hover{
+     border: 1px solid  rgb(185, 185, 185);
+}
+.marker{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: 50%;
+    transform: translateY(-40%);
+    left: 20px;
+    border: 3px solid rgb(211, 211, 211);
+}
+.lbl-radio:hover .marker{
+    border: 3px solid rgb(179, 179, 179);
+}
+input[type='radio']:checked + .lbl-radio{
+    border: 1px solid #4a00e0;
+}
+input[type='radio']:checked + .lbl-radio > .marker{
+    border: 3px solid #4a00e0;
+}
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    background-color: rgb(221, 221, 221);
+}
+
+input[type="checkbox"]:after{
+    content: "\e3d7";
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    font-family: uicons-regular-straight !important;
+}
+.checker{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .8rem;
+}
+.checker:hover input[type="checkbox"]{
+    background-color: rgb(206, 205, 205);
+}
+input[type="checkbox"]:checked{
+    animation: slideup .5s forwards;
+    background-color:#4a00e0 !important;
+}
+@keyframes slideup {
+    0%{
+        transform: scale(.5);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    0%{
+        transform: scale(1);
+    }
+}
+.checker label{
+    cursor: pointer;
+}
+input[type='radio']{
+   display: none;
+}
+.course-reg ul{
+    padding-left: 0rem;
+}
+.boost-font{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.course-desc ul li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .8rem;
+    margin-bottom: .5rem;
+}
+.course-desc  i{
+    font-size: 1.1rem;
+}
+.course-desc ul li p{
+    margin-bottom: 1rem;
+}
+.course-desc i{
+    color: #4a00e0;
+}
+.carousel-item{
+    position: relative;
+}
+.item-container{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-30%,-50%);
+    max-width: 700px;
+    color: white;
+}
+.item-container >*{
+    margin-bottom: 2rem;
+}
+.item-container h2{
+    font-size: 4rem;
+}
+#item1,#item2,#item3{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+#item1{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(52, 19, 143, 0.5)), url(../images/webcarousel.jpeg);
+}
+#item2{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(52, 19, 143, 0.5)), url(../images/softcarousel.jpg);
+}
+#item3{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(52, 19, 143, 0.5)), url(../images/cybercarouel.jpeg);
+}
 @media (max-width:768px){
     .navbar-nav .nav-item:not(:last-child){
         margin-right: 0rem;
     }
     .navbar-nav .nav-item{
         margin-bottom: .5rem;
+    }
+    .cs-bg2{
+    padding: 2rem;
+    }
+    .check-flex{
+       flex-wrap: wrap;
+    }
+    .item-container >*{
+    margin-bottom: 1rem;
+    }
+    .item-container h2{
+        font-size: 3rem;
     }
 }
